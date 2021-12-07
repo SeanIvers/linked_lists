@@ -29,3 +29,11 @@ class LinkedList:
         new_node = Node(new_value)
         new_node.set_next_node(self.head_node)
         self.head_node = new_node
+
+    def stringify_list(self):
+        string = ""
+        current_node = self.head_node
+        while current_node != None:
+            string += str(current_node.get_value()) + "\n"
+            current_node = current_node.get_next_node()
+        return string
