@@ -24,3 +24,8 @@ class LinkedList:
 
     def get_head_node(self):
         return self.head_node
+
+    def insert_beginning(self, new_value):
+        new_node = Node(new_value)
+        new_node.set_next_node(self.head_node)
+        self.head_node = new_node
